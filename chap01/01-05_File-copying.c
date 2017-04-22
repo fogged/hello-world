@@ -6,10 +6,18 @@ int main()
     nl = 0;
     
     //c = getchar();
-    while ((c=getchar()) != EOF){
-        if (c == '\n'){
-            ++nl;
-        }
-    }
-    printf("%d\n",nl);
+/*  // New line count    
+/*    while ((c=getchar()) != EOF){*/
+/*        if (c == '\n'){*/
+/*            ++nl;*/
+/*        }*/
+/*    }*/
+/*    printf("%d\n",nl);*/
+
+    c = getchar();
+    while (c != EOF){
+       putchar(c);
+       c = getchar();
+   }
+   printf("End program properly\n");
 }
