@@ -54,11 +54,6 @@ int main()
 	}
 	printf("\n");
 	
-/*    for (i = 0; i < 01; ++i)*/
-/*    {*/
-/*        if (len[i] > max)*/
-/*            max = len [i];*/
-/*    }*/
 	for (j = 0; j < max; ++j){
 	    for (i = 0; i < 10 ; ++i){
 	        if ((len[i] - (max - 1)) > 0)
