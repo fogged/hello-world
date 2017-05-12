@@ -4,14 +4,15 @@
 
 #include <stdio.h>
 
+#define MAX_LENGTH 15
 int main()
 {
 	unsigned long c;
-	int len[10];
+	int len[MAX_LENGTH];
 	int i, j, wc, space, max;
 	
 	wc = space = max = 0;
-	for (i = 0; i< 10; ++i)
+	for (i = 0; i< MAX_LENGTH; ++i)
 		len[i] = 0;
 
 	while ((c = getchar()) != EOF){
@@ -46,31 +47,30 @@ int main()
 	printf("Frequency of world length =\n");
 
 
-	for (i = 0; i < 10; ++i)
+	for (i = 0; i < MAX_LENGTH; ++i)
 	{
-		printf(" %d", len[i]);
+		printf(" %2d", len[i]);
 		if (len[i] > max)
 		    max = len[i];
 	}
 	printf("\n");
 	
 	for (j = 0; j < max; ++j){
-	    for (i = 0; i < 10 ; ++i){
+	    for (i = 0; i < MAX_LENGTH ; ++i){
 	        if ((len[i] - (max - 1)) > 0)
 	        {
-	            printf(" |");
+	            printf("  X");
             }
             else
             {
-                printf("  ");
+                printf("  .");
                 ++len[i];
-                
             }
             	    
         }
         printf("\n");
     }
-	for (i = 0; i < 10; ++i)
-	    printf(" %d", i);
+	for (i = 0; i < MAX_LENGTH; ++i)
+	    printf(" %2d", i);
 	printf("\n");
 }
